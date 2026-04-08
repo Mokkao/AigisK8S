@@ -1,5 +1,5 @@
 ---
-clusterName: kubernetes
+clusterName: AigisK8S
 
 talosVersion: "${talosVersion}"
 kubernetesVersion: "${kubernetesVersion}"
@@ -54,24 +54,6 @@ nodes:
           - gateway: "10.24.8.254"
             network: 0.0.0.0/0
         mtu: 1500
-  - hostname: "aigis-k8s-03"
-    ipAddress: "10.24.8.12"
-    installDisk: "/dev/sda"
-    machineSpec:
-      secureboot: false
-    talosImageURL: factory.talos.dev/installer/d3dc673627e9b94c6cd4122289aa52c2484cddb31017ae21b75309846e257d30
-    controlPlane: false
-    networkInterfaces:
-      - deviceSelector:
-          hardwareAddr: "bc:24:11:14:65:ee"
-        dhcp: false
-        addresses:
-          - "10.24.8.12/24"
-        routes:
-          - gateway: "10.24.8.254"
-            network: 0.0.0.0/0
-        mtu: 1500
-
 # Global patches
 patches:
   - "@./patches/global/machine-files.yaml"
