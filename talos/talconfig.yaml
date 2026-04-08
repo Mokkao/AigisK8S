@@ -1,5 +1,5 @@
 ---
-clusterName: kubernetes
+clusterName: AigisK8S
 
 talosVersion: "${talosVersion}"
 kubernetesVersion: "${kubernetesVersion}"
