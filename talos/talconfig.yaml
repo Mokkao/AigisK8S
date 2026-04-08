@@ -1,5 +1,5 @@
 ---
-clusterName: AigisK8S
+clusterName: kubernetes
 
 talosVersion: "${talosVersion}"
 kubernetesVersion: "${kubernetesVersion}"
@@ -34,7 +34,7 @@ nodes:
               - "10.24.8.10/24"
             mtu: 1500
             routes:
-              - gateway: "10.24.8.1"
+              - gateway: "10.24.8.254"
                 network: 0.0.0.0/0
             vip:
               ip: "10.24.8.50"
@@ -54,7 +54,7 @@ nodes:
               - "10.24.8.11/24"
             mtu: 1500
             routes:
-              - gateway: "10.24.8.1"
+              - gateway: "10.24.8.254"
                 network: 0.0.0.0/0
   - hostname: "aigis-k8s-03"
     ipAddress: "10.24.8.12"
@@ -72,7 +72,7 @@ nodes:
               - "10.24.8.12/24"
             mtu: 1500
             routes:
-              - gateway: "10.24.8.1"
+              - gateway: "10.24.8.254"
                 network: 0.0.0.0/0
 
 # Global patches
