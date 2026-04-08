@@ -28,16 +28,15 @@ nodes:
     networkInterfaces:
       - deviceSelector:
           hardwareAddr: "bc:24:11:75:c4:d1"
-        vlans:
-          - vlanId: 8
-            addresses:
-              - "10.24.8.10/24"
-            mtu: 1500
-            routes:
-              - gateway: "10.24.8.254"
-                network: 0.0.0.0/0
-            vip:
-              ip: "10.24.8.50"
+        dhcp: false
+        addresses:
+          - "10.24.8.10/24"
+        routes:
+          - gateway: "10.24.8.254"
+            network: 0.0.0.0/0
+        mtu: 1500
+        vip:
+          ip: "10.24.8.50"
   - hostname: "aigis-k8s-02"
     ipAddress: "10.24.8.11"
     installDisk: "/dev/sda"
@@ -48,14 +47,13 @@ nodes:
     networkInterfaces:
       - deviceSelector:
           hardwareAddr: "bc:24:11:8e:62:69"
-        vlans:
-          - vlanId: 8
-            addresses:
-              - "10.24.8.11/24"
-            mtu: 1500
-            routes:
-              - gateway: "10.24.8.254"
-                network: 0.0.0.0/0
+        dhcp: false
+        addresses:
+          - "10.24.8.11/24"
+        routes:
+          - gateway: "10.24.8.254"
+            network: 0.0.0.0/0
+        mtu: 1500
   - hostname: "aigis-k8s-03"
     ipAddress: "10.24.8.12"
     installDisk: "/dev/sda"
@@ -66,14 +64,13 @@ nodes:
     networkInterfaces:
       - deviceSelector:
           hardwareAddr: "bc:24:11:14:65:ee"
-        vlans:
-          - vlanId: 8
-            addresses:
-              - "10.24.8.12/24"
-            mtu: 1500
-            routes:
-              - gateway: "10.24.8.254"
-                network: 0.0.0.0/0
+        dhcp: false
+        addresses:
+          - "10.24.8.12/24"
+        routes:
+          - gateway: "10.24.8.254"
+            network: 0.0.0.0/0
+        mtu: 1500
 
 # Global patches
 patches:
