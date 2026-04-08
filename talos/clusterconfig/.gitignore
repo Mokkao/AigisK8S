@@ -2,3 +2,6 @@ kubernetes-aigis-k8s-01.yaml
 kubernetes-aigis-k8s-02.yaml
 kubernetes-aigis-k8s-03.yaml
 talosconfig
+AigisK8S-aigis-k8s-01.yaml
+AigisK8S-aigis-k8s-02.yaml
+AigisK8S-aigis-k8s-03.yaml
